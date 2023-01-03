@@ -16,6 +16,8 @@
 - git remote -v : 어디로 연결되어 있는지 확인
 - git remote add [<옵션>] <이름> <url> : 연결할 레파지토리 추가
 - git push -f 이름 main(or master?)  : ‘이름’이 연결된 곳으로 push (-f는 force의 약자)
+- git checkout main : HEAD 현재 위치 확인
+- git reset --hard origin/main : 현재 로컬 저장소의 sub 브랜치에 있는 모든 내용과 변경사항을 버리고, 원격저장소의 main 브랜치와 동일하게 만든다.
 
 ## 이진법 ~ 십진법 변환
 
