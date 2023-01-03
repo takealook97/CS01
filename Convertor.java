@@ -71,8 +71,8 @@ public class Convertor {
         }
     }
 
-    public static boolean[] dec2bin(int decimal) {//십진법 to 이진법
-        int length ;
+    public boolean[] dec2bin(int decimal) {//십진법 to 이진법
+        int length;
         int a = 0;
         while (true) {
             if (decimal < (int) Math.pow(2, a)) {//입력된 정수가 2^i로 나눠질경우 배열의 길이는 i
@@ -81,14 +81,15 @@ public class Convertor {
             }
             a++;
         }
-        boolean[] answer = new boolean[length + 1];
-        for (int i = length; i >= 0; i--) {
-            if (decimal / (int) Math.pow(2, i) == 1) {//주어진 정수가 2^i로 나눴을때 몫이 1인경우는 true
-                answer[i] = true;
-                decimal -= Math.pow(2, i);
-            } else answer[i] = false;//반대의 경우에는 false
+        int i = 0;
+        boolean[] binary = new boolean[length + 1];
+        while (decimal > 0) {
+            if (decimal % 2 != 0) binary[i] = true;
+            else binary[i] = false;
+            decimal /= 2;
+            i++;
         }
-        return answer;
+        return Arrays.copyOf(binary, i);
     }
 
     public static int bin2dec(boolean[] bin) {//이진법 to 십진법
