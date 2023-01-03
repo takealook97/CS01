@@ -28,50 +28,9 @@ public class Convertor {
                 }
             }
             System.out.println(bin2dec(tf));
-        } else if (input.charAt(0) == 'A' || input.charAt(0) == 'B') {
-            String inputB = sc.nextLine();
-            int countA = 1;
-            int countB = 1;
-            for (int i = 0; i < input.length(); i++) {
-                if (input.charAt(i) == ',') { //반점으로 boolean의 개수를 구한다
-                    countA++; //A배열의 개수 구하기
-                }
-            }
-            for (int i = 0; i < inputB.length(); i++) {
-                if (inputB.charAt(i) == ',') { //반점으로 boolean의 개수를 구한다
-                    countB++; //B배열의 개수 구하기
-                }
-            }
-            boolean[] tfA = new boolean[countA];
-            boolean[] tfB = new boolean[countB];
-            if (input.charAt(0) == 'A') {
-                int tfANum = 0;
-                for (int i = 0; i < input.length(); i++) {
-                    if (input.charAt(i) == '1') {//1일경우 true
-                        tfA[tfANum] = true;
-                        tfANum++;
-                    } else if (input.charAt(i) == '0') {//0일경우 false
-                        tfA[tfANum] = false;
-                        tfANum++;
-                    }
-                }
-            } else if (inputB.charAt(0) == 'B') {
-                int tfBNum = 0;
-                for (int i = 0; i < inputB.length(); i++) {
-                    if (inputB.charAt(i) == '1') {//1일경우 true
-                        tfB[tfBNum] = true;
-                        tfBNum++;
-                    } else if (inputB.charAt(i) == '0') {//0일경우 false
-                        tfB[tfBNum] = false;
-                        tfBNum++;
-                    }
-                }
-            }
-            System.out.println("결과" + " = " + Arrays.toString(sumBinary(tfA, tfB)));
         }
     }
-
-    public boolean[] dec2bin(int decimal) {//십진법 to 이진법
+    public static boolean[] dec2bin(int decimal) {//십진법 to 이진법
         int length;
         int a = 0;
         while (true) {
@@ -92,7 +51,7 @@ public class Convertor {
         return Arrays.copyOf(binary, i);
     }
 
-    public int bin2dec(boolean[] bin) {//이진법 to 십진법
+    public static int bin2dec(boolean[] bin) {//이진법 to 십진법
         int decimal = 0;
         for (int i = 0; i < bin.length; i++) {
             if (bin[i]) {//주어진 배열에서 boolean 값이 true일 경우
@@ -100,21 +59,5 @@ public class Convertor {
             }
         }
         return decimal;
-    }
-
-    public static boolean[] sumBinary(boolean[] a, boolean[] b) {
-        int sumA = 0;
-        int sumB = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i]) {
-                sumA += (int) Math.pow(2, a.length - i - 1);
-            }
-        }
-        for (int i = 0; i < b.length; i++) {
-            if (b[i]) {
-                sumB += (int) Math.pow(2, b.length - i - 1);
-            }
-        }
-        return dec2bin(sumA + sumB);
     }
 }
