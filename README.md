@@ -58,15 +58,15 @@
 
    - https://www.delftstack.com/ko/howto/linux/how-to-make-new-directories-in-linux/ (참고)
    -
-   ![img.png](img.png)
+   ![1](https://user-images.githubusercontent.com/118447769/210422821-07c82b0e-f39a-4f46-8658-13a4317468b8.png)
 
 6. 날짜, 시간 지정
 
-   ![img_1.png](img_1.png)
+   ![2](https://user-images.githubusercontent.com/118447769/210422936-954b37f4-d8fc-4e4e-b72e-7fd1adcdd013.png)
 
 7. 자바 설치
    - Could not get lock/var/lib/kpkg/lock-frontend 에러발생
 
    - https://kgu0724.tistory.com/71 (해결법)
 
-   ![img_2.png](img_2.png)
+   ![3](https://user-images.githubusercontent.com/118447769/210422969-7426f6d6-501f-4f61-8b12-118f2efca342.png)
