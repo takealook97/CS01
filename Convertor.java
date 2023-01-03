@@ -92,14 +92,14 @@ public class Convertor {
         return Arrays.copyOf(binary, i);
     }
 
-    public static int bin2dec(boolean[] bin) {//이진법 to 십진법
-        int answer = 0;
+    public int bin2dec(boolean[] bin) {//이진법 to 십진법
+        int decimal = 0;
         for (int i = 0; i < bin.length; i++) {
             if (bin[i]) {//주어진 배열에서 boolean 값이 true일 경우
-                answer += (int) Math.pow(2, i);//2^i를 더한다
+                decimal += (int) Math.pow(2, i);//2^i를 더한다
             }
         }
-        return answer;
+        return decimal;
     }
 
     public static boolean[] sumBinary(boolean[] a, boolean[] b) {
