@@ -1,23 +1,26 @@
 🎯CS01 개발환경과 리눅스
 =
-
+-------
 # Mission 1. 개발환경
 
 ## 공통 배경지식 : git
 
-- 프로젝트를 만들 때 get from vcs 로 만들기
+   __프로젝트를 만들 때 get from vcs 로 만들기__
 - git status : 현재 상황 확인
 - git add 파일명(첫 글자 치고 tab) : unstaged 에서 stage 로 올려준다
 - git restore --staged 파일명 : stage에서 다시 unstage로 복구
 - git commit -m “커밋메세지” : 커밋메세지 남기고 커밋 (m은 메세지의 약자) , 커밋된 모든 파일들이 같은 커밋메세지로 넘어가므로 주의할것
 - git log : 커밋된 로컬에 저장된 것과 푸시된 리모트에 저장된 것을 보여준다.
    - (push 할 시 (HEAD -> main, origin/main, origin/HEAD) 가 (위로) 붙어나옴
-- 두 곳 이상에 push 할 때
+
+
+   __두 곳 이상에 push 할 때__
 - git remote -v : 어디로 연결되어 있는지 확인
 - git remote add [<옵션>] <이름> <url> : 연결할 레파지토리 추가
 - git push -f 이름 main(or master?)  : ‘이름’이 연결된 곳으로 push (-f는 force의 약자)
 - git checkout main : HEAD 현재 위치 확인
 - git reset --hard origin/main : 현재 로컬 저장소의 sub 브랜치에 있는 모든 내용과 변경사항을 버리고, 원격저장소의 main 브랜치와 동일하게 만든다.
+
 
 ## 이진법 ~ 십진법 변환
 
@@ -35,7 +38,7 @@
 ### 3. 이진법 to 십진법
 
 - 입력된 boolean 배열은 2^0 부터 거듭제곱을 순차적으로 확인했을때 true일 경우 값을 누적합 시켜주면 된다.
-
+--------------------------
 # Mission 2. 가상머신 리눅스
 
 ## 가상환경 설치
@@ -57,7 +60,7 @@
 5. 디렉토리 생성 후 접근권한 764로 변경
 
    - https://www.delftstack.com/ko/howto/linux/how-to-make-new-directories-in-linux/ (참고)
-   -
+
    ![1](https://user-images.githubusercontent.com/118447769/210422821-07c82b0e-f39a-4f46-8658-13a4317468b8.png)
 
 6. 날짜, 시간 지정
