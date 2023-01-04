@@ -73,3 +73,30 @@
    - https://kgu0724.tistory.com/71 (해결법)
 
    ![3](https://user-images.githubusercontent.com/118447769/210422969-7426f6d6-501f-4f61-8b12-118f2efca342.png)
+
+
+## 가상환경에서 작업하기
+
+1. SSH 리모트를 통해 본인 계정으로 접속
+
+   - $ ssh 유저명@아이피
+
+2. 현재 경로 확인
+
+   - $ pwd
+
+3. 디렉토리 내용 확인
+
+   - $ ls
+
+4. cs16 디렉토리로 이동
+
+-   $ cd cs16
+
+5. ubuntu에 git 설치
+
+   - $ sudo apt install git
+
+6. 깃 클론
+
+   - $ git clone https://github.com/e7d4f69b0e0af82xxxxxxx.git CS01
